@@ -1,0 +1,24 @@
+var onRun = function(context) {
+	var layers = context.selection;
+	if(layers.count() == 0) {
+		context.document.showMessage('No layers selected')
+		return;
+	}
+
+	for(var i=0; i<layers.count(); i++) {
+		var layer = layers[i]
+		var rect = layer.rect()
+		var originalWidth = rect.size.width
+		var originalHeight = rect.size.height
+
+		rect.size.width = originalWidth * 0.05
+		rect.size.height = originalHeight * 0.05
+		layer.setRect(rect)
+
+		layer.reduceImageSize()
+
+		rect.size.width = originalWidth
+		rect.size.height = originalHeight
+		layer.setRect(rect)	
+	}
+};

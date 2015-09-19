@@ -1,0 +1,17 @@
+{
+  "name": "Mosaic",
+  "identifier": "jp.tomorrowkey.sketch3.mosaic",
+  "version": "1.0.0",
+  "description": "Apply mosaic easily",
+
+  "author": "tomorrowkey",
+  "homepage": "https://github.com/tomorrowkey/sketch3-mosaic-plugin",
+
+  "commands" : [
+    {
+      "script" : "script.cocoascript",
+      "handler" : "onRun",
+      "name" : "Apply mosaic"
+    }
+  ]
+}
